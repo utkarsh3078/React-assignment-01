@@ -1,0 +1,161 @@
+.random-user-page {
+  display: flex;
+  justify-content: center;
+}
+
+.random-user-card {
+  width: min(100%, 920px);
+  border: 2px solid #4767ab;
+  border-radius: 2rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: rgba(247, 243, 234, 0.82);
+  box-shadow: 0 24px 60px rgba(23, 32, 51, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.random-user-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.random-user-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: #5d6b86;
+}
+
+.random-user-name {
+  margin: 0.5rem 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  color: #172033;
+}
+
+.random-user-subtitle {
+  margin: 0;
+  color: #5d6b86;
+  font-weight: 600;
+}
+
+.random-user-avatar-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.random-user-avatar {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(71, 103, 171, 0.25);
+  box-shadow: 0 16px 35px rgba(23, 32, 51, 0.14);
+}
+
+.random-user-avatar-placeholder {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(23, 32, 51, 0.08),
+    rgba(71, 103, 171, 0.18)
+  );
+  color: #172033;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.random-user-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.random-user-field {
+  padding: 1rem 1.1rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(71, 103, 171, 0.18);
+}
+
+.random-user-field-wide {
+  grid-column: 1 / -1;
+}
+
+.random-user-field-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: #5d6b86;
+  font-weight: 700;
+}
+
+.random-user-field-value {
+  display: block;
+  color: #172033;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.random-user-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.page.dark .random-user-card {
+  background: rgba(23, 32, 51, 0.74);
+  border-color: rgba(119, 145, 199, 0.55);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.page.dark .random-user-label,
+.page.dark .random-user-subtitle,
+.page.dark .random-user-field-label {
+  color: rgba(247, 243, 234, 0.75);
+}
+
+.page.dark .random-user-name,
+.page.dark .random-user-field-value {
+  color: #f7f3ea;
+}
+
+.page.dark .random-user-field {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.page.dark .random-user-avatar {
+  border-color: rgba(139, 167, 224, 0.45);
+}
+
+.page.dark .random-user-avatar-placeholder {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(139, 167, 224, 0.16)
+  );
+  color: #f7f3ea;
+}
+
+@media (max-width: 720px) {
+  .random-user-header {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .random-user-avatar-wrap {
+    justify-content: flex-start;
+  }
+
+  .random-user-grid {
+    grid-template-columns: 1fr;
+  }
+}

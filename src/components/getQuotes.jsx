@@ -6,7 +6,7 @@ function GetQuotes() {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
   const [loading, setLoading] = useState(true);
-  const query = ["technology", "human", "life", "inspirational"];
+  const query = ["technology", "human", "inspirational"];
   let randomIndex = Math.floor(Math.random() * query.length);
 
   async function fetchQuote() {

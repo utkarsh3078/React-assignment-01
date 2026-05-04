@@ -29,6 +29,20 @@ function HomePage() {
           </Link>
         </div>
       </section>
+      <br></br>
+      {/* Get a random user */}
+      <section className="card">
+        <h1 className="home-title">Random User</h1>
+        <p className="home-description">
+          Use the navbar buttons to move to the users page and fetch a random
+          user from the API.
+        </p>
+        <div className="button-row">
+          <Link to="/users" className="button primary">
+            View Users
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
