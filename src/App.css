@@ -9,12 +9,20 @@
     "Segoe UI",
     sans-serif;
 }
+.light {
+  background: linear-gradient(135deg, #f7f3ea 0%, #eef4ff 100%);
+  color: #172033;
+}
+.dark {
+  background: linear-gradient(135deg, #172033 0%, #2c3d5f 100%);
+  color: #f7f3ea;
+}
 
 .card {
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 2px solid #172033;
+  border: 2px solid #4767ab;
   border-radius: 5rem;
   padding: 3rem;
 }

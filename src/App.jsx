@@ -1,36 +1,27 @@
 import GetJokes from "./components/getJokes.jsx";
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
-
-function HomePage() {
-  return (
-    <section className="card">
-      <h1 className="home-title">Jokes</h1>
-      <p className="home-description">
-        Use the navbar buttons to move to the jokes page and fetch a random joke
-        from the API.
-      </p>
-      <div className="button-row">
-        <Link to="/jokes" className="button primary">
-          View Jokes
-        </Link>
-      </div>
-    </section>
-  );
-}
+import { useState } from "react";
+import HomePage from "./components/homePage.jsx";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <div className="page">
+    <div className={`page ${darkMode ? "dark" : "light"}`}>
       <header className="navbar">
         <Link to="/" className="button">
           <strong>React Assignment</strong>
         </Link>
 
         <nav className="button-row">
-          <Link to="/jokes" className="button primary">
-            Jokes
-          </Link>
+          <button
+            className="button"
+            onClick={() => {
+              setDarkMode(!darkMode);
+            }}
+          >
+            Dark Mode
+          </button>
         </nav>
       </header>
 
