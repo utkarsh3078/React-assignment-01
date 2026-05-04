@@ -3,6 +3,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { useState } from "react";
 import HomePage from "./components/homePage.jsx";
+import GetQuotes from "./components/getQuotes.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/jokes" element={<GetJokes />} />
+          <Route path="/quotes" element={<GetQuotes />} />
         </Routes>
       </main>
     </div>
