@@ -82,6 +82,19 @@ function HomePage() {
           </Link>
         </div>
       </section>
+      <br></br>
+      <section className="card">
+        <h1 className="home-title">YouTube Videos</h1>
+        <p className="home-description">
+          Search and browse YouTube videos from FreeAPI with filters and
+          pagination.
+        </p>
+        <div className="button-row">
+          <Link to="/youtube-videos" className="button primary">
+            View Videos
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

@@ -8,6 +8,7 @@ import GetRandomUsers from "./components/getRandomUsers.jsx";
 import GetCats from "./components/getRandomCats.jsx";
 import Meals from "./components/meals.jsx";
 import GetRandomProduct from "./components/getRandomProduct.jsx";
+import GetYoutubeVideo from "./components/getYoutubeVideo.jsx";
 import Register from "./auth/register.jsx";
 import Login from "./auth/login.jsx";
 
@@ -32,6 +33,9 @@ function App() {
             <Link to="/login" className="button">
               Login
             </Link>
+            <Link to="/youtube-videos" className="button">
+              YouTube
+            </Link>
             <button
               className="button"
               onClick={() => {
@@ -53,6 +57,7 @@ function App() {
           <Route path="/cats" element={<GetCats />} />
           <Route path="/meals" element={<Meals />} />
           <Route path="/products" element={<GetRandomProduct />} />
+          <Route path="/youtube-videos" element={<GetYoutubeVideo />} />
           <Route
             path="/register"
             element={
