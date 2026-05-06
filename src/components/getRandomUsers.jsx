@@ -27,7 +27,7 @@ function GetRandomUsers() {
       };
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       setGender(data?.data?.gender ?? "gender not found");
       setEmail(data?.data?.email ?? "email not found");
       setTitle(data?.data?.name?.title ?? "title not found");

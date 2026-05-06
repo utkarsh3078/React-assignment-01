@@ -69,6 +69,19 @@ function HomePage() {
           </Link>
         </div>
       </section>
+      <br></br>
+      <section className="card">
+        <h1 className="home-title">Random Products</h1>
+        <p className="home-description">
+          Use the navbar buttons to move to the products page and fetch a random
+          product from the API.
+        </p>
+        <div className="button-row">
+          <Link to="/products" className="button primary">
+            View Products
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
