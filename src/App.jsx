@@ -33,9 +33,6 @@ function App() {
             <Link to="/login" className="button">
               Login
             </Link>
-            <Link to="/youtube-videos" className="button">
-              YouTube
-            </Link>
             <button
               className="button"
               onClick={() => {
