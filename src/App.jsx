@@ -5,6 +5,7 @@ import { useState } from "react";
 import HomePage from "./components/homePage.jsx";
 import GetQuotes from "./components/getQuotes.jsx";
 import GetRandomUsers from "./components/getRandomUsers.jsx";
+import GetCats from "./components/getRandomCats.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,6 +34,7 @@ function App() {
           <Route path="/jokes" element={<GetJokes />} />
           <Route path="/quotes" element={<GetQuotes />} />
           <Route path="/users" element={<GetRandomUsers />} />
+          <Route path="/cats" element={<GetCats />} />
         </Routes>
       </main>
     </div>
