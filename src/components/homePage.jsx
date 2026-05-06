@@ -56,6 +56,19 @@ function HomePage() {
           </Link>
         </div>
       </section>
+      <br></br>
+      <section className="card">
+        <h1 className="home-title">Random Meals</h1>
+        <p className="home-description">
+          Use the navbar buttons to move to the cats page and fetch a random cat
+          from the API.
+        </p>
+        <div className="button-row">
+          <Link to="/meals" className="button primary">
+            View Meals
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
