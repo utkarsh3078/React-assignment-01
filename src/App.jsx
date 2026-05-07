@@ -39,7 +39,7 @@ function App() {
                 setDarkMode(!darkMode);
               }}
             >
-              Dark Mode
+              {darkMode ? "Light Mode" : "Dark Mode"}
             </button>
           </nav>
         </header>
