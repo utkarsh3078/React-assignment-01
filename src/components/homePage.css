@@ -1,0 +1,124 @@
+.home-layout {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  padding: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -12% -55% auto;
+  width: clamp(200px, 28vw, 320px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(43, 181, 157, 0.4), transparent 62%);
+  pointer-events: none;
+}
+
+.home-eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: var(--ink-muted);
+  font-size: 0.78rem;
+}
+
+.home-heading {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.8rem, 4.4vw, 3.4rem);
+  line-height: 1.02;
+  max-width: 18ch;
+}
+
+.home-lead {
+  margin: 0.85rem 0 0;
+  max-width: 56ch;
+  color: var(--ink-muted);
+  line-height: 1.7;
+}
+
+.home-page {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.home-tile {
+  position: relative;
+  min-height: 210px;
+  overflow: hidden;
+}
+
+.home-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    130deg,
+    rgba(15, 78, 94, 0.03),
+    rgba(43, 181, 157, 0.14)
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.home-tile:hover::before {
+  opacity: 1;
+}
+
+.home-tile-index {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 700;
+}
+
+.home-title {
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.home-description {
+  margin: 0;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+.home-page .button-row {
+  margin-top: auto;
+}
+
+@media (max-width: 960px) {
+  .home-page {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page {
+    grid-template-columns: 1fr;
+  }
+
+  .home-tile .button {
+    width: 100%;
+  }
+}
+
+.page.dark .home-eyebrow,
+.page.dark .home-lead,
+.page.dark .home-tile-index,
+.page.dark .home-description {
+  color: rgba(243, 249, 255, 0.75);
+}

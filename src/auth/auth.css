@@ -27,24 +27,24 @@
   background:
     radial-gradient(
       circle at top left,
-      rgba(168, 85, 247, 0.18),
+      rgba(92, 219, 235, 0.22),
       transparent 30%
     ),
     radial-gradient(
       circle at bottom right,
-      rgba(59, 130, 246, 0.16),
+      rgba(69, 189, 167, 0.2),
       transparent 28%
     ),
-    linear-gradient(135deg, #172033 0%, #0d1220 100%);
+    linear-gradient(135deg, #061720 0%, #102935 100%);
   color: #f7f3ea;
 }
 
 .dark .auth-wrapper::before {
-  background: rgba(168, 85, 247, 0.18);
+  background: rgba(92, 219, 235, 0.2);
 }
 
 .dark .auth-wrapper::after {
-  background: rgba(59, 130, 246, 0.14);
+  background: rgba(69, 189, 167, 0.18);
 }
 
 .auth-wrapper::before,

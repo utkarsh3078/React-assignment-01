@@ -4,10 +4,16 @@
 }
 
 .products-card {
-  width: 100%;
+  width: min(100%, 1100px);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 2rem;
+  padding: clamp(1.3rem, 3vw, 2rem);
+  background: var(--surface);
+  box-shadow: var(--surface-shadow);
+  backdrop-filter: blur(12px);
 }
 
 .products-header {
@@ -36,11 +42,12 @@
   margin: 0;
   max-width: 36rem;
   line-height: 1.6;
+  color: var(--ink-muted);
 }
 
 .products-error {
   margin: 0;
-  color: #b42318;
+  color: #c33f31;
   font-weight: 600;
 }
 
@@ -57,22 +64,22 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #5d6b86;
+  color: var(--ink-muted);
 }
 
 .products-input {
   min-width: 220px;
   padding: 0.75rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(23, 32, 51, 0.18);
-  background: rgba(255, 255, 255, 0.9);
-  color: inherit;
+  border: 1px solid rgba(18, 52, 61, 0.2);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
   outline: none;
 }
 
 .products-input:focus {
-  border-color: #172033;
-  box-shadow: 0 0 0 3px rgba(23, 32, 51, 0.12);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(17, 125, 137, 0.15);
 }
 
 .products-grid {
@@ -84,9 +91,9 @@
 .product-card {
   overflow: hidden;
   border-radius: 1.5rem;
-  border: 1px solid rgba(23, 32, 51, 0.12);
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 14px 40px rgba(23, 32, 51, 0.08);
+  border: 1px solid rgba(18, 52, 61, 0.12);
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 14px 40px rgba(23, 54, 66, 0.08);
 }
 
 .product-image {
@@ -116,7 +123,7 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.75rem;
-  color: #5d6b86;
+  color: var(--ink-muted);
 }
 
 .product-name {
@@ -164,6 +171,40 @@
   100% {
     background-position: -200% 0;
   }
+}
+
+.page.dark .products-card {
+  border-color: var(--surface-border);
+}
+
+.page.dark .products-subtitle,
+.page.dark .products-input-label,
+.page.dark .product-category {
+  color: var(--ink-muted);
+}
+
+.page.dark .products-input,
+.page.dark .product-card {
+  background: rgba(235, 249, 255, 0.06);
+  border-color: rgba(170, 231, 241, 0.14);
+}
+
+.page.dark .products-input {
+  color: var(--ink);
+}
+
+.page.dark .products-input:focus {
+  border-color: #63dae9;
+  box-shadow: 0 0 0 3px rgba(99, 218, 233, 0.16);
+}
+
+.page.dark .products-error {
+  color: #ff9d93;
+}
+
+.page.dark .product-line {
+  background: linear-gradient(90deg, #1b4351, #2c6070, #1b4351);
+  background-size: 200% 100%;
 }
 
 @media (max-width: 640px) {

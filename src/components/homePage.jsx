@@ -1,101 +1,87 @@
 import { Link } from "react-router-dom";
+import "./homePage.css";
+
+const tools = [
+  {
+    title: "Jokes",
+    description:
+      "Fetch a fresh random joke from FreeAPI whenever you need a quick laugh.",
+    path: "/jokes",
+    cta: "Open Jokes",
+  },
+  {
+    title: "Quotes",
+    description:
+      "Discover inspirational and technology quotes curated from the API.",
+    path: "/quotes",
+    cta: "Open Quotes",
+  },
+  {
+    title: "Random User",
+    description:
+      "Generate random user profiles with personal and location details.",
+    path: "/users",
+    cta: "Open Users",
+  },
+  {
+    title: "Random Cats",
+    description: "Get random cat breeds with images, traits, and quick facts.",
+    path: "/cats",
+    cta: "Open Cats",
+  },
+  {
+    title: "Meals",
+    description:
+      "Search meals by keyword and explore ingredients and instructions.",
+    path: "/meals",
+    cta: "Open Meals",
+  },
+  {
+    title: "Products",
+    description:
+      "Browse random product results by category with prices and previews.",
+    path: "/products",
+    cta: "Open Products",
+  },
+  {
+    title: "YouTube Videos",
+    description: "Search YouTube videos with sorting and pagination controls.",
+    path: "/youtube-videos",
+    cta: "Open Videos",
+  },
+];
+
 function HomePage() {
   return (
-    <>
-      {/* Joke section */}
-      <section className="card">
-        <h1 className="home-title">Jokes</h1>
-        <p className="home-description">
-          Use the navbar buttons to move to the jokes page and fetch a random
-          joke from the API.
+    <section className="home-layout">
+      {/* <header className="home-hero card">
+        <p className="home-eyebrow">Liquid UI Playground</p>
+        <h1 className="home-heading">
+          Explore every API tool from one dashboard
+        </h1>
+        <p className="home-lead">
+          Jump into jokes, quotes, users, cats, meals, products, and YouTube
+          data with a single consistent liquid interface.
         </p>
-        <div className="button-row">
-          <Link to="/jokes" className="button primary">
-            View Jokes
-          </Link>
-        </div>
-      </section>
-      <br></br>
-      {/* Quote section */}
-      <section className="card">
-        <h1 className="home-title">Quotes</h1>
-        <p className="home-description">
-          Use the navbar buttons to move to the quotes page and fetch a random
-          quote from the API.
-        </p>
-        <div className="button-row">
-          <Link to="/quotes" className="button primary">
-            View Quotes
-          </Link>
-        </div>
-      </section>
-      <br></br>
-      {/* Get a random user */}
-      <section className="card">
-        <h1 className="home-title">Random User</h1>
-        <p className="home-description">
-          Use the navbar buttons to move to the users page and fetch a random
-          user from the API.
-        </p>
-        <div className="button-row">
-          <Link to="/users" className="button primary">
-            View Users
-          </Link>
-        </div>
-      </section>
-      <br></br>
-      <section className="card">
-        <h1 className="home-title">Random cats</h1>
-        <p className="home-description">
-          Use the navbar buttons to move to the cats page and fetch a random cat
-          from the API.
-        </p>
-        <div className="button-row">
-          <Link to="/cats" className="button primary">
-            View Cats
-          </Link>
-        </div>
-      </section>
-      <br></br>
-      <section className="card">
-        <h1 className="home-title">Random Meals</h1>
-        <p className="home-description">
-          Use the navbar buttons to move to the cats page and fetch a random cat
-          from the API.
-        </p>
-        <div className="button-row">
-          <Link to="/meals" className="button primary">
-            View Meals
-          </Link>
-        </div>
-      </section>
-      <br></br>
-      <section className="card">
-        <h1 className="home-title">Random Products</h1>
-        <p className="home-description">
-          Use the navbar buttons to move to the products page and fetch a random
-          product from the API.
-        </p>
-        <div className="button-row">
-          <Link to="/products" className="button primary">
-            View Products
-          </Link>
-        </div>
-      </section>
-      <br></br>
-      <section className="card">
-        <h1 className="home-title">YouTube Videos</h1>
-        <p className="home-description">
-          Search and browse YouTube videos from FreeAPI with filters and
-          pagination.
-        </p>
-        <div className="button-row">
-          <Link to="/youtube-videos" className="button primary">
-            View Videos
-          </Link>
-        </div>
-      </section>
-    </>
+      </header> */}
+
+      <div className="home-page">
+        {tools.map((tool, index) => (
+          <article className="card home-tile" key={tool.path}>
+            <p className="home-tile-index">
+              {String(index + 1).padStart(2, "0")}
+            </p>
+            <h2 className="home-title">{tool.title}</h2>
+            <p className="home-description">{tool.description}</p>
+            <div className="button-row">
+              <Link to={tool.path} className="button primary">
+                {tool.cta}
+              </Link>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
 

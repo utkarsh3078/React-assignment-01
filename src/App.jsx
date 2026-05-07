@@ -13,7 +13,7 @@ import Register from "./auth/register.jsx";
 import Login from "./auth/login.jsx";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const location = useLocation();
   const isAuthRoute =
     location.pathname === "/login" || location.pathname === "/register";
@@ -30,9 +30,9 @@ function App() {
             <Link to="/register" className="button">
               Register
             </Link>
-            <Link to="/login" className="button">
+            {/* <Link to="/login" className="button">
               Login
-            </Link>
+            </Link> */}
             <button
               className="button"
               onClick={() => {
